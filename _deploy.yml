@@ -1,0 +1,4 @@
+git_branch: gh-pages
+git_url: git@github.com:justmytwospence/pixyll.git
+method: git
+site_dir: public
