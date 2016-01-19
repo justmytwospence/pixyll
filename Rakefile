@@ -36,7 +36,7 @@ end
 desc "Deploy site to github-pages"
 task :deploy do
   require "jekyll"
-  require "octopress"
+  require "octopress-deploy"
 
   Jekyll::Commands::Build.process({})
   Octopress::Deploy.push({})
