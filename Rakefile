@@ -17,6 +17,11 @@ desc "Deploy site to github-pages"
 task :deploy do
   require "jekyll"
   require "octopress"
-  Jekyll::Commands::Build.process
-  sh "bundle exec octopress deploy"
+  Jekyll::Commands::Build.process({})
+  Octopress::Deploy::push({
+    "git_branch" => "gh-pages",
+    "git_url" => "git@github.com:justmytwospence/pixyll.git",
+    "method" => "git",
+    "site_dir" => "public"
+  })
 end
