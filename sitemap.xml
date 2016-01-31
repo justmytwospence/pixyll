@@ -5,6 +5,10 @@
     <lastmod>2014-12-01T00:00:00-08:00</lastmod>
   </url>
   <url>
+    <loc>http://spencerboucher.com/fun-with-sankey-diagrams/</loc>
+    <lastmod>2014-03-13T00:00:00-07:00</lastmod>
+  </url>
+  <url>
     <loc>http://spencerboucher.com/ec2-apis/</loc>
     <lastmod>2014-01-12T00:00:00-08:00</lastmod>
   </url>
@@ -111,6 +115,9 @@
     </url>
     <url>
       <loc>http://spencerboucher.com/ec2-apis/</loc>
+    </url>
+    <url>
+      <loc>http://spencerboucher.com/fun-with-sankey-diagrams/</loc>
     </url>
     <url>
       <loc>http://spencerboucher.com/maptime-at-stamen/</loc>
