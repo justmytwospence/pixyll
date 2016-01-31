@@ -87,7 +87,8 @@ Reddit, the illustrious CPG Grey will enlighten you.&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;IPython.display&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;YouTubeVideo&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;YouTubeVideo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&#39;tlI022aUWQQ&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;iframe width=&quot;400&quot; height=300&quot; src=&quot;https://www.youtube.com/embed/tlI022aUWQQ&quot; frameborder=&quot;0&quot; allowfullscreen &gt;&lt;/iframe&gt;
+&lt;iframe width=&quot;400&quot; height=300&quot; src=&quot;https://www.youtube.com/embed/tlI022aUWQQ&quot;
+frameborder=&quot;0&quot; allowfullscreen &gt;&lt;/iframe&gt;
 
 &lt;p&gt;The task of massaging columnar data consisting of an image ID, subreddit name,
 and timestamp for each submission into a more networky format suitable for this
@@ -109,114 +110,7 @@ modules we will need and take a look at the data.&lt;/p&gt;
 
 &lt;span class=&quot;err&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;csvclean&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;redditSubmissions&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;csv&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;d&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read_csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&#39;redditSubmissions_out.csv&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;div style=&quot;max-height:1000px;max-width:1500px;overflow:auto;&quot;&gt;
-&lt;table border=&quot;1&quot; class=&quot;dataframe&quot;&gt;
-  &lt;thead&gt;
-    &lt;tr style=&quot;text-align: right;&quot;&gt;
-      &lt;th&gt;&lt;/th&gt;
-      &lt;th&gt;#image_id&lt;/th&gt;
-      &lt;th&gt;unixtime&lt;/th&gt;
-      &lt;th&gt;rawtime&lt;/th&gt;
-      &lt;th&gt;title&lt;/th&gt;
-      &lt;th&gt;total_votes&lt;/th&gt;
-      &lt;th&gt;reddit_id&lt;/th&gt;
-      &lt;th&gt;number_of_upvotes&lt;/th&gt;
-      &lt;th&gt;subreddit&lt;/th&gt;
-      &lt;th&gt;number_of_downvotes&lt;/th&gt;
-      &lt;th&gt;localtime&lt;/th&gt;
-      &lt;th&gt;score&lt;/th&gt;
-      &lt;th&gt;number_of_comments&lt;/th&gt;
-      &lt;th&gt;username&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;th&gt;0&lt;/th&gt;
-      &lt;td&gt; 0&lt;/td&gt;
-      &lt;td&gt; 1333172439&lt;/td&gt;
-      &lt;td&gt; 2012-03-31T12:40:39.590113-07:00&lt;/td&gt;
-      &lt;td&gt;          And here&amp;rsquo;s a downvote.&lt;/td&gt;
-      &lt;td&gt; 63470&lt;/td&gt;
-      &lt;td&gt; rmqjs&lt;/td&gt;
-      &lt;td&gt; 32657&lt;/td&gt;
-      &lt;td&gt;    funny&lt;/td&gt;
-      &lt;td&gt; 30813&lt;/td&gt;
-      &lt;td&gt; 1333197639&lt;/td&gt;
-      &lt;td&gt; 1844&lt;/td&gt;
-      &lt;td&gt; 622&lt;/td&gt;
-      &lt;td&gt; Animates_Everything&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;th&gt;1&lt;/th&gt;
-      &lt;td&gt; 0&lt;/td&gt;
-      &lt;td&gt; 1333178161&lt;/td&gt;
-      &lt;td&gt; 2012-03-31T14:16:01.093638-07:00&lt;/td&gt;
-      &lt;td&gt;                     Expectation&lt;/td&gt;
-      &lt;td&gt;    35&lt;/td&gt;
-      &lt;td&gt; rmun4&lt;/td&gt;
-      &lt;td&gt;    29&lt;/td&gt;
-      &lt;td&gt; GifSound&lt;/td&gt;
-      &lt;td&gt;     6&lt;/td&gt;
-      &lt;td&gt; 1333203361&lt;/td&gt;
-      &lt;td&gt;   23&lt;/td&gt;
-      &lt;td&gt;   3&lt;/td&gt;
-      &lt;td&gt;       Gangsta_Raper&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;th&gt;2&lt;/th&gt;
-      &lt;td&gt; 0&lt;/td&gt;
-      &lt;td&gt; 1333199913&lt;/td&gt;
-      &lt;td&gt; 2012-03-31T20:18:33.192906-07:00&lt;/td&gt;
-      &lt;td&gt;                        Downvote&lt;/td&gt;
-      &lt;td&gt;    41&lt;/td&gt;
-      &lt;td&gt; rna86&lt;/td&gt;
-      &lt;td&gt;    32&lt;/td&gt;
-      &lt;td&gt; GifSound&lt;/td&gt;
-      &lt;td&gt;     9&lt;/td&gt;
-      &lt;td&gt; 1333225113&lt;/td&gt;
-      &lt;td&gt;   23&lt;/td&gt;
-      &lt;td&gt;   0&lt;/td&gt;
-      &lt;td&gt;       Gangsta_Raper&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;th&gt;3&lt;/th&gt;
-      &lt;td&gt; 0&lt;/td&gt;
-      &lt;td&gt; 1333252330&lt;/td&gt;
-      &lt;td&gt;        2012-04-01T10:52:10-07:00&lt;/td&gt;
-      &lt;td&gt; Every time I downvote something&lt;/td&gt;
-      &lt;td&gt;    10&lt;/td&gt;
-      &lt;td&gt; ro7e4&lt;/td&gt;
-      &lt;td&gt;     6&lt;/td&gt;
-      &lt;td&gt; GifSound&lt;/td&gt;
-      &lt;td&gt;     4&lt;/td&gt;
-      &lt;td&gt; 1333277530&lt;/td&gt;
-      &lt;td&gt;    2&lt;/td&gt;
-      &lt;td&gt;   0&lt;/td&gt;
-      &lt;td&gt;       Gangsta_Raper&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;th&gt;4&lt;/th&gt;
-      &lt;td&gt; 0&lt;/td&gt;
-      &lt;td&gt; 1333272954&lt;/td&gt;
-      &lt;td&gt; 2012-04-01T16:35:54.393381-07:00&lt;/td&gt;
-      &lt;td&gt;  Downvote &amp;amp;quot;Dies Irae&amp;amp;quot;&lt;/td&gt;
-      &lt;td&gt;    65&lt;/td&gt;
-      &lt;td&gt; rooof&lt;/td&gt;
-      &lt;td&gt;    57&lt;/td&gt;
-      &lt;td&gt; GifSound&lt;/td&gt;
-      &lt;td&gt;     8&lt;/td&gt;
-      &lt;td&gt; 1333298154&lt;/td&gt;
-      &lt;td&gt;   49&lt;/td&gt;
-      &lt;td&gt;   0&lt;/td&gt;
-      &lt;td&gt;       Gangsta_Raper&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;5 rows × 13 columns&lt;/p&gt;
-&lt;/div&gt;
-
 &lt;p&gt;Note that I first called &lt;code&gt;csvclean&lt;/code&gt;, from the
 &lt;a href=&quot;http://csvkit.readthedocs.org/en/latest/index.html&quot;&gt;csvkit suite of command line utilities&lt;/a&gt;. The bang (!) symbol calls the
 command line from IPython. &lt;code&gt;csvclean&lt;/code&gt; fixes a couple of formatting errors in the
@@ -339,9 +233,9 @@ that holds the link weights, and then some display configuration stuff.&lt;/p&gt
 &lt;p&gt;We can render the resulting iframe directly in our IPython notebook! Hover over
 edges for some nice brushing or click and drag the nodes to untangle a
 relationship you&amp;rsquo;re interested in.&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;n&quot;&gt;HTML&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&#39;&amp;lt;iframe src=&quot;//gist.githubusercontent.com/justmytwospence/2c4e103693636b645f62/raw/71119ea1b0f427abd5d1d6cd4ec1e1f57e7ebf32/sankey.html&quot; height=540 width=700 frameBorder=&quot;0&quot;&amp;gt;&amp;lt;/iframe&amp;gt;&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;n&quot;&gt;HTML&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&#39;&amp;lt;iframe src=&quot;./sankey.html&quot; height=540 width=700 frameBorder=&quot;0&quot;&amp;gt;&amp;lt;/iframe&amp;gt;&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;iframe src=&quot;//gist.githubusercontent.com/justmytwospence/2c4e103693636b645f62/raw/71119ea1b0f427abd5d1d6cd4ec1e1f57e7ebf32/sankey.html&quot; height=540 width=700 frameBorder=&quot;0&quot;&gt;&lt;/iframe&gt;
+&lt;iframe src=&quot;http://spencerboucher.com/images/sankey.html&quot; height=540 width=700 frameBorder=&quot;0&quot;&gt;&lt;/iframe&gt;
 
 &lt;p&gt;This type of &amp;ldquo;tiered&amp;rdquo; Sankey diagram is a little unconventional, but so far its
 the best way I can come up with to visualize the interesting phenomenon of
